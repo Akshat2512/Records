@@ -126,20 +126,20 @@ content = JSON.parse(content);
 
 let prev=SaveArr.pop();
 
-console.log(content);
+// console.log(content);
 n_arr=strData['Accounting Details'];
 temp=JSON.stringify(n_arr);
 temp=JSON.parse(temp);
-console.log(n_arr);
+// console.log(n_arr);
 SaveArr.push(temp);
-console.log(SaveArr);
+// console.log(SaveArr);
 n_arr[name]=content;
 SaveArr.push(n_arr);
 string=JSON.stringify(SaveArr);
 localStorage.setItem('changes',string);
-console.log(n_arr);
+// console.log(n_arr);
 n_arr=JSON.stringify(strData);
-console.log(n_arr);
+// console.log(n_arr);
 localStorage.setItem('content',n_arr);
 
 
@@ -151,7 +151,7 @@ document.getElementById('Lamt').value="0.00";
 document.getElementById('nm').value='';
 document.getElementById('submit').disabled=true;
    content = strData;
-  console.log(content);
+  
 
  
  window.parent.putData(content);

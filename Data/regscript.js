@@ -154,7 +154,7 @@ document.getElementById('B3').onclick=() =>
     .then(data => { 
      var content=atob(data.content);
   
-      //  console.log('Data Loaded successfully');
+      console.log('Data Loaded successfully');
        document.getElementById('B1').disabled=false;
        document.getElementById('B3').disabled=false;
        document.getElementById('loader').hidden=true;
@@ -199,7 +199,7 @@ function putData(cont)
     headers: header,
   }).then(res => res.json())
   .then(data => {
-    // console.log('Data Loaded successfully');
+    console.log('Data Loaded successfully');
     sha = data.sha;
     body = JSON.stringify({ message: "Accounts Detail Updated", content: btoa(content), sha: sha  })
 
@@ -216,7 +216,7 @@ function putData(cont)
       ifr1.contentDocument.querySelectorAll("button").forEach(elem => { elem.disabled = false; });
       ifr1.contentDocument.getElementById("btn1").disabled = true;
       LoadData(content)
-      // console.log('Data on server updated');
+      console.log('Data on server updated');
     })
    
   

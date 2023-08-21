@@ -90,18 +90,14 @@
            
         }). then( response => response.json())
             . then( data =>  
-                {   console.log(header);
-                    console.log(data);
+                {   
                     var content = data.content;
                     content = atob(content);
                     content = JSON.parse(content);
-                    console.log(content);
+                   
                     
                     let length = Object.keys(content.username).length;
-                        console.log(length);
-
                     
-                        console.log(content.username[user]);
                          var x = content.username[user];
                         if(typeof x === "string")
                         {

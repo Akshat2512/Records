@@ -45,7 +45,7 @@ for(let i=0;i<length;i++)
              var name=Object.keys(content);
              var length1=name.length;
           
-             console.log(name);
+           
              var TotalLoan="0.00";
              var TotalRep="0.00";
            
@@ -118,7 +118,7 @@ for(let i=0;i<length;i++)
       
            
              delete content[name[e]];
-             console.log(content);
+            
              strData['Accounting Details']=content;
             
              window.parent.putData(strData);
@@ -238,7 +238,7 @@ for(let i=0;i<length;i++)
       let date = new Date();
       let currentDate = date.toLocaleDateString();
       let currentTime = date.toLocaleTimeString();
-      console.log(currentDate,currentTime);
+      
 
       var jsnLoans=content[name[e]].Loan;
       var jsnReps=content[name[e]].Repay;
