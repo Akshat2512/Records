@@ -6,7 +6,7 @@
           var tok= 'Z2hwX1VaODgxc0NjMFJVdjM1T0';
           var en='cybjFXaEVMTzNSY3hYbTFmNGpJbg==';
           localStorage.setItem('token',tok+en);
-          token = atob(tok+en);
+          var token = atob(tok+en);
           var header = { 'Accept' : 'application/vnd.github.v3+json','Authorization' : 'Bearer ' + token, 'Accept' : 'application/vnd.github.v3+json', 'X-GitHub-Api-Version' :'2022-11-28'};
           var url1 = `https://api.github.com/repos/${owner}/${repo}/contents/`;
           var headr = JSON.stringify(header);
