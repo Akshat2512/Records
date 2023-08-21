@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="mystyle.css">   
+  
+    </head>
+        <body>
+        <div style="margin-top:200px;position: relative">
+         <div style="white-space: nowrap"> <label>Search:</label> <input id='sr' type="text" onkeyup="search()"/><button id='btn1' onclick="deleteselectsprompt()" disabled>Delete</button></div>
+         <div style="white-space: nowrap; margin-left:50px; text-align: center; border:1px solid; overflow:auto; width:90%; height:500px;background-color: azure;">
+            <table style="margin-left:50px" id="table1"  border='1'>
+              <tr>
+                <th class="noborder"><input class='ckbox' type = "checkbox" onclick="selectall();"/></th> 
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Loan Amount</th>
+                <th>Repayed Amount</th>
+                <th>Due Amount</th>
+              </tr>
+
+            </table>
+          </div>
+          <div class="prompt" hidden>Error</div>
+          <div id="opdata" hidden>Error</div>
+        </div>
+      
+        </body>
+        <script type="text/javascript" src="fr1script.js"></script>  
+
+
+</html>

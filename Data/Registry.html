@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+     Records
+    </title>
+    <link rel="stylesheet" href="mystyle.css">   
+    </head>
+    <body>
+    <form>
+      <table border="1">
+        <tr>
+          <button style='position:fixed'></button>
+          <td id="lt"><button type="button" id="B1" onclick="EnterData()" disabled>Add New Member</button><br><br><button type="button" id="B2" onclick="DisplayData()" disabled>Display</button><br><br><button type="button" id="B3" type="button" disabled>Logout</button></td>
+          <td style="text-align: right;" id='md' ><span><iframe id="if1" src='frame1.html' height="1000" style="border: 1px solid; "  ></iframe></span></td>
+          <td style="text-align: right;" id='rt' ><span><iframe id="if2" src='frame2.html' width="0px" style="border-top: none; border-bottom: none; border-right:none;"  ></iframe></span></td>
+        </tr>
+      </table>
+      <div id="loader" class="loader" ></div>
+    </form>
+    <script type="text/javascript" src="regscript.js"></script>  
+    </body>
+</html>

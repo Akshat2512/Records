@@ -1,0 +1,30 @@
+#div1{
+    overflow: hidden;
+    white-space: nowrap;
+    position: fixed;
+    padding-right:300px;
+    left:37%
+}
+
+#sp1
+{
+   position: absolute;
+   border-radius: 10px;
+   border: 1px solid gray;
+   background-color: rgb(219, 240, 240);
+   padding: 4px;
+   top:18%;
+   left: 86%;
+   
+}
+#sp2
+{
+    position: absolute;
+   border-radius: 10px;
+   border: 1px solid gray;
+   background-color: rgb(219, 240, 240);
+   padding: 4px;
+   top:58%;
+   left: 86%;
+   
+}

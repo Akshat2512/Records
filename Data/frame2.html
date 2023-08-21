@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>
+     Records
+    </title>
+    <link rel="stylesheet" href="fr2style.css">
+
+    </head>
+    <body>
+        <button id="bck" ><-Back</button>
+        <div id="div3">
+        <form method="post" action="script.php" onsubmit="return formValidation()">
+            <div id='div1'>
+                <div id="div2" style="position:absolute" hidden="true"></div>
+                
+             <table>
+                <tr>
+                    <td><label>Name: </label></td>
+                    <td>   <input id="nm" type="text" onkeyup="checkDetails()" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Age: </label></td>
+                    <td>   <input id="age" type="number" maxlength="3" min="0" value="0" required/></td>
+                </tr>
+                <tr>
+                    <td><label>Gender: </label></td>
+                    <td>Male:<input type="radio" name="Gender" value="Male"/> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp Female:<input type="radio" name="Gender" value="Female"/>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspOthers:<input id="other" type="radio" name="Gender" value="Others" checked/></td>
+                </tr>
+                <tr>
+                    <td><label>Phone No.: </label></td>
+                    <td>   <input id="phn" type="text" maxlength="13" value="+91"/></td>
+                </tr>
+                <tr>
+                    <td><label>Address: </label></td>
+                    <td>  <textarea name="addr" id="addr" cols="30" rows="10"></textarea></td>
+                </tr>
+                <tr>
+                    <td><label>Loan Amount: </label></td>
+                    <td>Rs.<input id="Lamt" type="number" value="0.00" required/></td>
+                </tr>
+                <tr>
+                    <td colspan="2"><input type="button" value="Submit" id="submit" onclick="UpdateAccData()" disabled/></td>
+                </tr>
+            
+             </table>
+             </div>
+              
+        </form>
+    </div>
+    <script type="text/javascript" src="fr2script.js"></script>  
+    </body>
+</html>

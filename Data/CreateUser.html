@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="mystyle.css">
+        <style>
+            #div1
+            {   
+                padding: 40px;
+                white-space:nowrap;
+                overflow: hidden;
+                border: 1px solid;
+                width: 700px;
+                margin-left: 200px;
+               
+            }
+            #sp5
+            {   
+               z-index: 4;
+               position: absolute;
+               border-radius: 10px;
+               border: 1px solid gray;
+               background-color: rgb(219, 240, 240);
+               padding: 4px;
+               left: 350px;
+               
+            }
+            #bck{
+                margin-top: 50px;
+                margin-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class='loader' hidden></div>
+        <button id="bck" style=" white-space: nowrap;"><-Back</button>
+    
+        <form>
+         <div id='div1' style="position:relative;margin-top:100px"><h2>Enter Your New Account Details</h2>
+             <table><tr><td><label>First Name: </label></td><td><input type="text" name="fn" id="fn" required/><span id="sp1"></span></td></tr>
+             <tr><td> <label>Last Name: </label></td><td><input type="text" id="ln" required/><span id="sp2"></span></td></tr>
+             <tr></tr><td><label>Gender: </label></td><td>Male:<input type="radio" name="Gender" value="Male"/>&nbsp&nbsp&nbsp&nbsp Female:<input type="radio" name="Gender" value="Female"/> &nbsp&nbsp&nbsp&nbsp Others:<input id="other" type="radio" name="Gender" value="Others" checked/></td></tr>
+            <tr><td> <label>Username: </label> </td><td><input type="text"  id="un" required/><span id="sp3"></span></td></tr>
+            <tr><td><label>New Password: </label></td><td><input type="password"  id="npwd" required/><span id="sp4"></span></td></tr>
+            <tr><td><label>Confirm Password: </label></td><td><input type="password" id="cpwd" onkeyup="checkpassword()" required/><span id="sp5"></span></td></tr>
+            <tr><td></td><td><input onclick="CheckDetails()" type="button" name="cusr" id="cusr" value="Confirm" disabled></td></tr>
+            
+            </table>
+            <div id="prompt"></div>
+             <!-- <div style="position:absolute; white-space: nowrap; top: 10px; left: 230px"> <input type="file" id="myfile" accept=".jpg,.jpeg,.png"> </div> -->
+         </div> 
+         </form>
+      
+
+
+    <script type="text/javascript" src="cnuscript.js">    </script>
+</body>
+</html>
