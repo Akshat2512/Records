@@ -133,7 +133,8 @@ function CreateNewUser(sha,user,js)
             .then(data => {document.getElementById('prompt').innerHTML="You have created your new Account!!"
                             window.parent.moveframeleft();
                             window.parent.document.getElementById('ifr1').contentDocument.getElementById('prompt').innerHTML='Please Enter Your New Account Login Credentials Again!!'});
-            
+                            window.parent.document.getElementById('ifr1').contentDocument.getElementById('nm').value='';
+                            window.parent.document.getElementById('ifr1').contentDocument.getElementById('pwd').value='';
             });
 
 
