@@ -152,8 +152,13 @@ document.getElementById('B3').onclick=() =>
    
   }).then( response => response.json())
     .then(data => { 
-     var content=atob(data.content);
-  
+      var content;
+      try{
+      content=atob(data.content);
+      }
+      catch(e){
+        window.open(url='../Main.html',target='_parent');
+      }
       console.log('Data Loaded successfully');
        document.getElementById('B1').disabled=false;
        document.getElementById('B3').disabled=false;
