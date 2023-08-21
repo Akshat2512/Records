@@ -256,7 +256,7 @@ for(let i=0;i<length;i++)
       data=`<button onclick="document.getElementById('opdata').hidden=true;document.getElementById('opdata').innerHTML=''"><-Back</button><br><br><br><br>`;
       data=data+`<div style='position:relative;'><img src="${content[name[e]].Photo}" height="200" width="200" alt="Error 404"><br><br>`;
       data=data+`<div style='position:absolute; top: 10px; left:230px; width: 230px; height: 235px; overflow:auto'>Name : ${name[e]}<br><br>Age : ${content[name[e]].Age}<br><br>Gender : ${content[name[e]].Gender}<br>`;
-      data=data+`Contact : ${content[name[e]].Contact} <a href="tel:${content[name[e]].Contact}"><i class="material-icons" style="font-size:36px">call</i></a><br><br>Address : " ${content[name[e]].Address} "</div><div id='history' style='white-space:nowrap;position:absolute;overflow:auto; height: 0px; top:-90px;left:460px;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.39);
+      data=data+`Contact : ${content[name[e]].Contact} <a href="tel:${content[name[e]].Contact}"><i class="material-icons" style="font-size:36px">call</i></a><br><br>Address : " ${content[name[e]].Address} "</div><div id='history' style='white-space:nowrap;position:absolute;overflow:auto; height: 0px; top:-90px;left:470px;box-shadow: 0 5px 10px rgba(0, 0, 0, 0.39);
       '>${tb}</div>`;
       data=data+`<div style='white-space:nowrap;position:absolute; top:250px;'> Loan Amount = Rs. ${Loan} + <input id='addLn' value="0.00" type="number"><br><br>Repayed Amount = Rs. ${Repay} + <input id='addRp' value="0.00" type="number"><br><br>Due Amount = Rs. ${Loan-Repay}<br><br> <button id='sv'>Save</button></div>`;
       x.innerHTML=data;
