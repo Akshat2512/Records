@@ -17,11 +17,11 @@
              <table>
                 <tr>
                     <td><label>Name: </label></td>
-                    <td>   <input id="nm" type="text" onkeyup="checkDetails()" required/></td>
+                    <td>   <input id="nm" type="text" onkeyup="checkDetails()" autocomplete="off" required/></td>
                 </tr>
                 <tr>
                     <td><label>Age: </label></td>
-                    <td>   <input id="age" type="number" maxlength="3" min="0" value="0" required/></td>
+                    <td>   <input id="age" type="number" maxlength="3" min="0" value="0" autocomplete="off" required/></td>
                 </tr>
                 <tr>
                     <td><label>Gender: </label></td>
@@ -29,15 +29,15 @@
                 </tr>
                 <tr>
                     <td><label>Phone No.: </label></td>
-                    <td>   <input id="phn" type="text" maxlength="13" value="+91"/></td>
+                    <td>   <input id="phn" type="text" maxlength="13" value="+91" autocomplete="off" /></td>
                 </tr>
                 <tr>
                     <td><label>Address: </label></td>
-                    <td>  <textarea name="addr" id="addr" cols="30" rows="10"></textarea></td>
+                    <td>  <textarea name="addr" id="addr" cols="30" rows="10" autocomplete="off"></textarea></td>
                 </tr>
                 <tr>
                     <td><label>Loan Amount: </label></td>
-                    <td>Rs.<input id="Lamt" type="number" value="0.00" required/></td>
+                    <td>Rs.<input id="Lamt" type="number" value="0.00" autocomplete="off" required/></td>
                 </tr>
                 <tr>
                     <td colspan="2"><input type="button" value="Submit" id="submit" onclick="UpdateAccData()" disabled/></td>
