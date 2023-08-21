@@ -52,10 +52,9 @@ for(let i=0;i<length;i++)
             document.getElementById("table1").innerHTML=reset;
             table=document.getElementById("table1").innerHTML;
           
-            for(i=0; i < length1; i++)
+            for(let i=0; i < length1; i++)
             {   
-                
-                console.log(name[i]);
+              
                 
                 var loan=Object.values(content[name[i]].Loan);
                
@@ -233,6 +232,7 @@ for(let i=0;i<length;i++)
     { 
       var content = strData['Accounting Details'];
       var name=Object.keys(content);
+  
       var Loan=document.getElementsByClassName('Ln')[e].innerHTML;
       var Repay=document.getElementsByClassName('Rp')[e].innerHTML;
       let date = new Date();
@@ -244,9 +244,6 @@ for(let i=0;i<length;i++)
       var jsnReps=content[name[e]].Repay;
     
       var dateofloans=Object.keys(jsnLoans);
-
-
-      console.log(dateofloans);
      
       var tb=`<table cellpadding='4' border=1><tr><th><b>Date</b></th><th><b>Loans<b></th><th><b>Repays<b></th></tr>`;
       for(let i=dateofloans.length-1;i>=0;i--)
@@ -258,9 +255,9 @@ for(let i=0;i<length;i++)
       x.hidden=false;
       data=`<button onclick="document.getElementById('opdata').hidden=true;document.getElementById('opdata').innerHTML=''"><-Back</button><br><br><br><br>`;
       data=data+`<div style='position:relative;'><img src="${content[name[e]].Photo}" height="200" width="200" alt="Error 404"><br><br>`;
-      data=data+`<div style='position:absolute; top: 10px; left:230px;  width: 300px'>Name : ${name[e]}<br><br>Age : ${content[name[e]].Age}<br><br>Gender : ${content[name[e]].Gender}<br><br>`;
-      data=data+`Contact : ${content[name[e]].Contact} <a href="tel:${content[name[e]].Contact}"><i class="material-icons" style="font-size:36px">call</i></a><br><br>Address : ${content[name[e]].Address}</div><div style='white-space:nowrap;position:absolute; border: 1px solid;overflow:auto; height: 250px; top:-90px;left:460px'>${tb}</div>`;
-      data=data+`<div style='white-space:nowrap;position:absolute; top:250px;'> Loan Amount = Rs. ${Loan} + <input id='addLn' value="0.00" type="number"><br><br>Repayed Amount = Rs. ${Repay} + <input id='addRp' value="0.00" type="number"><br><br><button id='sv'>Save</button></div>`;
+      data=data+`<div style='position:absolute; top: 10px; left:230px; width: 230px'>Name : ${name[e]}<br><br>Age : ${content[name[e]].Age}<br><br>Gender : ${content[name[e]].Gender}<br><br>`;
+      data=data+`Contact : ${content[name[e]].Contact} <a href="tel:${content[name[e]].Contact}"><i class="material-icons" style="font-size:36px">call</i></a><br><br>Address : " ${content[name[e]].Address} "</div><div style='white-space:nowrap;position:absolute; border: 1px solid;overflow:auto; height: 250px; top:-90px;left:460px'>${tb}</div>`;
+      data=data+`<div style='white-space:nowrap;position:absolute; top:250px;'> Loan Amount = Rs. ${Loan} + <input id='addLn' value="0.00" type="number"><br><br>Repayed Amount = Rs. ${Repay} + <input id='addRp' value="0.00" type="number"><br><br>Due Amount = Rs. ${Loan-Repay}<br><br> <button id='sv'>Save</button></div>`;
       x.innerHTML=data;
     
       document.getElementById('sv').onclick = ()=>{

@@ -21,7 +21,6 @@ var name,age,gender,contact,Addr,Loan;
 function LoadData(content)
 {
 strData=JSON.parse(content);
-console.log(strData);
 }
 var t;
 let k=0;

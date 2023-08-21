@@ -25,12 +25,24 @@
                background-color: rgb(219, 240, 240);
                padding: 4px;
                left: 380px;
-               bottom: 48px
-               
+               bottom: 48px;
+               box-shadow: 0 5px 10px rgba(0, 0, 0, 0.39);
             }
             #bck{
                 margin-top: 50px;
                 margin-left: 50px;
+            }
+            input:not([type="radio"]){
+                border-radius: 7px;
+                border: 1px solid rgb(194, 194, 194);
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.39);
+
+            }
+            #div1{
+                box-shadow: 0 5px 10px rgba(0, 0, 0, 0.39);
+            }
+            h2{
+                text-shadow: 0 5px 10px rgba(0, 0, 0, 0.50);
             }
         </style>
     </head>
@@ -44,7 +56,7 @@
              <tr><td> <label>Last Name: </label></td><td><input type="text" id="ln" autocomplete="off" required/><span id="sp2"></span></td></tr>
              <tr></tr><td><label>Gender: </label></td><td>Male:<input type="radio" name="Gender" value="Male"/>&nbsp&nbsp&nbsp&nbsp Female:<input type="radio" name="Gender" value="Female"/> &nbsp&nbsp&nbsp&nbsp Others:<input id="other" type="radio" name="Gender" value="Others" checked/></td></tr>
             <tr><td> <label>Username: </label> </td><td><input type="text"  id="un" autocomplete="off" required/><span id="sp3"></span></td></tr>
-            <tr><td><label>New Password: </label></td><td><input type="password"  id="npwd" required/><span id="sp4"></span></td></tr>
+            <tr><td><label>New Password: </label></td><td><input type="password"  id="npwd" onkeyup="checkpassword()" required/><span id="sp4"></span></td></tr>
             <tr><td><label>Confirm Password: </label></td><td><input type="password" id="cpwd" onkeyup="checkpassword()" required/><span id="sp5"></span></td></tr>
             <tr><td></td><td><input onclick="CheckDetails()" type="button" name="cusr" id="cusr" value="Confirm" disabled></td></tr>
             
