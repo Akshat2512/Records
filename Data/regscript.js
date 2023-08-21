@@ -130,12 +130,12 @@ ifr2.addEventListener('load',() =>{
 });
 
 document.getElementById('B3').onclick=() => 
-  {localStorage.clear('input1');
-  localStorage.clear('input2');
-  localStorage.clear('owner');
-  localStorage.clear('header');
-  localStorage.clear('token');
-  localStorage.clear('repo')
+  {localStorage.removeItem('input1');
+  localStorage.removeItem('input2');
+  localStorage.removeItem('owner');
+  localStorage.removeItem('header');
+  localStorage.removeItem('token');
+  localStorage.removeItem('repo')
   window.open(url='../Main.html',target='_parent');}
 
  function loaddata()
