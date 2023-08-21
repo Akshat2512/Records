@@ -92,6 +92,7 @@
                 { 
                     console.log(data);
                     var content = data.content;
+                    console.log(content);
                     content = atob(content);
                     content = JSON.parse(content);
                     console.log(content);
