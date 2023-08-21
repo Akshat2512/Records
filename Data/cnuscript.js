@@ -55,16 +55,10 @@ fetch('https://api.github.com/repos/'+owner+'/'+repo+'/contents/file.json', {
             .then(async data => {
                 content = data.content; 
                 sha1 = data.sha;
-                console.log(sha1);
                 content = atob(content); 
-                console.log(content);
                 content = JSON.parse(content);
-                console.log(content);
                 let length = Object.keys(content.username).length;
-                console.log(length);
-
-                
-                console.log(content.username[user]);
+                // console.log(content.username[user]);
                 var x = content.username[user];
                 if(typeof x === "string")
                 {
@@ -109,8 +103,8 @@ function CreateNewUser(sha,user,js)
    
     var content = `{\n"profile" :\n{\n"Fname" : "${firstname}",\n"Lname" : "${lastname}",\n"Date" :\n{\n"date" : "${currentDate}",\n"time" : "${currentTime}"\n},\n"Gender" : "${gender}",\n"DP":\n{\n"imgSrc" : "Data/Profile/${gender}.jpeg",\n"DateofPic" :\n{\n"date" : "",\n"time" : ""\n}\n},\n"Password" : "${password}"\n},\n"Accounting Details" : {}\n}`;
      var content = btoa(content);
-     console.log("Current Date: " + currentDate);
-      console.log("Current Time: " + currentTime);
+    //  console.log("Current Date: " + currentDate);
+    //   console.log("Current Time: " + currentTime);
       fetch(`https://api.github.com/repos/${owner}/${repo}/contents/Users/${user}/UserData.json`, {
             cache: 'no-cache',
             method: 'get',
@@ -151,7 +145,7 @@ fetch(`https://api.github.com/repos/${owner}/${repo}/contents/file.json`, {
 }). then(response => response.json())
     . then(data =>  
         { 
-            console.log(data);
+            // console.log(data);
     
         })
 

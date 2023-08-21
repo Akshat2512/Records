@@ -5,7 +5,7 @@ var repo = localStorage.getItem('repo');
 var token=  localStorage.getItem('token');
 var header=  localStorage.getItem('header');
  header = JSON.parse(header);
- console.log(header);
+
 token = atob(token);
  var url1 = `https://api.github.com/repos/${owner}/${repo}/contents/Users/${username}/UserData.json`;
 
@@ -41,7 +41,7 @@ ltf.width=width*(20/100)+'px';
 ifr1.width=width*(80/100)+'px';
 
 rtf.width=0+'px';
-console.log(width,height);
+
 //  ltf.style.paddingRight='200px';
 let i=0;
 
@@ -129,7 +129,14 @@ ifr2.addEventListener('load',() =>{
  
 });
 
-document.getElementById('B3').onclick=() => {localStorage.clear();  window.open(url='../Main.html',target='_parent');}
+document.getElementById('B3').onclick=() => 
+  {localStorage.clear('input1');
+  localStorage.clear('input2');
+  localStorage.clear('owner');
+  localStorage.clear('header');
+  localStorage.clear('token');
+  localStorage.clear('repo')
+  window.open(url='../Main.html',target='_parent');}
 
  function loaddata()
 {
@@ -147,7 +154,7 @@ document.getElementById('B3').onclick=() => {localStorage.clear();  window.open(
     .then(data => { 
      var content=atob(data.content);
   
-       console.log('Data Loaded successfully');
+      //  console.log('Data Loaded successfully');
        document.getElementById('B1').disabled=false;
        document.getElementById('B3').disabled=false;
        document.getElementById('loader').hidden=true;
@@ -184,7 +191,7 @@ function putData(cont)
   content=content.replaceAll("}\n,","},")
 
 
-  console.log(content);
+  // console.log(content);
 
   fetch(url1,{
     cache:'no-cache',
@@ -192,7 +199,7 @@ function putData(cont)
     headers: header,
   }).then(res => res.json())
   .then(data => {
-    console.log('Data Loaded successfully');
+    // console.log('Data Loaded successfully');
     sha = data.sha;
     body = JSON.stringify({ message: "Accounts Detail Updated", content: btoa(content), sha: sha  })
 
@@ -204,12 +211,12 @@ function putData(cont)
    
   }).then( response => response.json())
     .then(data => { 
-      console.log(data);
+      // console.log(data);
       document.getElementById('loader').hidden=true;
       ifr1.contentDocument.querySelectorAll("button").forEach(elem => { elem.disabled = false; });
       ifr1.contentDocument.getElementById("btn1").disabled = true;
       LoadData(content)
-      console.log('Data on server updated');
+      // console.log('Data on server updated');
     })
    
   
