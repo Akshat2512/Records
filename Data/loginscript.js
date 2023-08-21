@@ -7,7 +7,6 @@
           var en='cybjFXaEVMTzNSY3hYbTFmNGpJbg==';
           localStorage.setItem('token',tok+en);
           token = atob(tok+en);
-          console.log(token);
           var header = { 'Accept' : 'application/vnd.github.v3+json','Authorization' : 'Bearer ' + token, 'Accept' : 'application/vnd.github.v3+json', 'X-GitHub-Api-Version' :'2022-11-28'};
           var url1 = `https://api.github.com/repos/${owner}/${repo}/contents/`;
           var headr = JSON.stringify(header);
@@ -94,7 +93,6 @@
                 {   console.log(header);
                     console.log(data);
                     var content = data.content;
-                    console.log(content);
                     content = atob(content);
                     content = JSON.parse(content);
                     console.log(content);
