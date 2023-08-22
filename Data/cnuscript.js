@@ -25,7 +25,33 @@ function checkpassword()
 {
   var n_p=document.getElementById('npwd');
   var c_p=document.getElementById('cpwd');
-  
+  if(!passValidation())
+  {
+    return false;
+  }
+  function passValidation()
+  {
+
+      var password=document.getElementById('npwd').value;
+      
+       var regex1 = /[a-zA-Z0-9`~!/.@#$%^&*()-_+=]{4,}/;
+      if(!regex1.test(password))
+      {    
+          document.getElementById('sp5').style.backgroundColor='red';
+          document.getElementById('sp5').innerHTML = 'Enter Password (atleast 4 or more character)';
+
+          return false;
+      }
+      else 
+      {
+          document.getElementById('sp5').innerHTML = '';
+          return true;
+        
+      }
+      return false;
+
+  }
+ 
   if(n_p.value!=c_p.value)
   {
     document.getElementById('sp5').style.backgroundColor='red';
