@@ -3,7 +3,10 @@
     white-space: nowrap;
     position: fixed;
     padding-right:20%;
-    left:10%
+    left:10%;
+    overflow-y: auto;
+    border: 1px solid;
+  
 }
 
 #sp1
@@ -13,7 +16,7 @@
    border: 1px solid gray;
    background-color: rgb(219, 240, 240);
    padding: 4px;
-   top:18%;
+   top:12%;
    left: 86%;
    
 }
@@ -24,7 +27,7 @@
    border: 1px solid gray;
    background-color: rgb(219, 240, 240);
    padding: 4px;
-   top:58%;
+   top:53%;
    left: 86%;
    
 }
