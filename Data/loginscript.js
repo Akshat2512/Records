@@ -51,11 +51,11 @@
   
             var password=document.getElementById('pwd').value;
             
-             var regex1 = /[a-zA-Z0-9`~!/.@#$%^&*()-_+=]{8,}/;
+             var regex1 = /[a-zA-Z0-9`~!/.@#$%^&*()-_+=]{4,}/;
             if(!regex1.test(password))
             {    
                 document.getElementById('sp2').style.backgroundColor='red';
-                document.getElementById('sp2').innerHTML = 'Enter Password (atleast 8 or more character)';
+                document.getElementById('sp2').innerHTML = 'Enter Password (atleast 4 or more character)';
                 document.getElementById('sp1').innerHTML = '';
                 return false;
             }
