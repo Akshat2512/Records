@@ -105,7 +105,7 @@ function UpdateAccData()
     
   
    let date = new Date();
-   let currentDate = date.toLocaleDateString();
+   let currentDate = (date.getDate())+'/'+(date.getMonth()+1)+'/'+(date.getFullYear());
    let currentTime = date.toLocaleTimeString();
    
 

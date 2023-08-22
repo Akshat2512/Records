@@ -236,7 +236,7 @@ for(let i=0;i<length;i++)
       var Loan=document.getElementsByClassName('Ln')[e].innerHTML;
       var Repay=document.getElementsByClassName('Rp')[e].innerHTML;
       let date = new Date();
-      let currentDate = date.toLocaleDateString();
+      let currentDate = (date.getDate())+'/'+(date.getMonth()+1)+'/'+(date.getFullYear());
       let currentTime = date.toLocaleTimeString();
       
 
