@@ -11,14 +11,12 @@
 
 // });
 
-var owner = 'akshat2512';
-var repo = 'Docs';
-var tok= 'Z2hwX1VaODgxc0NjMFJVdjM1T0';
-var en='cybjFXaEVMTzNSY3hYbTFmNGpJbg==';
-
-var token = atob(tok+en);
-var header = { 'Accept' : 'application/vnd.github.v3+json','Authorization' : 'Bearer ' + token, 'Accept' : 'application/vnd.github.v3+json', 'X-GitHub-Api-Version' :'2022-11-28'};
-
+var token= localStorage.getItem('token');
+token = atob(token);
+var owner = localStorage.getItem('owner');
+var repo = localStorage.getItem('repo');
+ var header = localStorage.getItem('header');
+  header = JSON.parse(header);
 function formValidation()
 {
    
