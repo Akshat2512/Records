@@ -195,7 +195,7 @@ function putData(cont)
   content=content.replaceAll("}\n,","},")
 
   // console.log(content);
- if(localStorage.getItem('input2') != username && localStorage.getItem('input1') != password)
+ if(localStorage.getItem('input2') != password && localStorage.getItem('input1') != username)
 {
   window.open(url='../Main.html',target='_parent');
   return false;
