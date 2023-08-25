@@ -175,10 +175,13 @@ function LoadData(content){
  localStorage.setItem('content',content);
 
  localStorage.setItem('changes','[]');
-
+try{
  ifr1.contentWindow.LoadData(content);
  ifr2.contentWindow.LoadData(content);
-
+}
+catch(e){
+  LoadData(content);
+}
 }
 
 function putData(cont)
@@ -191,8 +194,11 @@ function putData(cont)
   content=content.replaceAll("}","\n}\n");
   content=content.replaceAll("}\n,","},")
 
-
   // console.log(content);
+ if(localStorage.getItem('input2') != username && localStorage.getItem('input1') != password)
+{
+  return false;
+}
 
   fetch(url1,{
     cache:'no-cache',
@@ -216,7 +222,7 @@ function putData(cont)
       document.getElementById('loader').hidden=true;
       ifr1.contentDocument.querySelectorAll("button").forEach(elem => { elem.disabled = false; });
       ifr1.contentDocument.getElementById("btn1").disabled = true;
-      LoadData(content)
+      LoadData(content);
       console.log('Data on server updated');
     })
    
