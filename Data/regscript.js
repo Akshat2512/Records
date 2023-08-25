@@ -140,11 +140,7 @@ document.getElementById('B3').onclick=() =>
 
  function loaddata()
 {
-  // var owner = localStorage.getItem('owner');
-  // var token = localStorage.getItem('token');
-  // var repo = localStorage.getItem('repo');
-  // var url = localStorage.getItem('url');
-   
+
   fetch(url1,{
     cache:'no-cache',
     method: 'GET',
@@ -153,19 +149,19 @@ document.getElementById('B3').onclick=() =>
   }).then( response => response.json())
     .then(data => { 
       var content;
-      content=atob(data.content);
+      try{ content=atob(data.content);}
+      catch(e){
+        window.open(url='../Main.html',target='_parent');
+      }
+     
       console.log('Data Loaded successfully');
        document.getElementById('B1').disabled=false;
        document.getElementById('B3').disabled=false;
        document.getElementById('loader').hidden=true;
        LoadData(content);
      
-    }).then(error => {
-      console.error();
- 
-      window.open(url='../Main.html',target='_parent');
-        
     })
+   
     document.getElementById('loader').hidden=false;
   return false;
 }
