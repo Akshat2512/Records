@@ -197,6 +197,7 @@ function putData(cont)
   // console.log(content);
  if(localStorage.getItem('input2') != username && localStorage.getItem('input1') != password)
 {
+  window.open(url='../Main.html',target='_parent');
   return false;
 }
 
