@@ -128,7 +128,7 @@ function CreateNewUser(sha,user,js)
     var password = document.getElementById('npwd').value;
     var gender = document.querySelector('input[name="Gender"]:checked').value;
    
-    var content = `{\n"profile" :\n{\n"Fname" : "${firstname}",\n"Lname" : "${lastname}",\n"Date" :\n{\n"date" : "${currentDate}",\n"time" : "${currentTime}"\n},\n"Gender" : "${gender}",\n"DP":\n{\n"imgSrc" : "Data/Profile/${gender}.jpeg",\n"DateofPic" :\n{\n"date" : "",\n"time" : ""\n}\n},\n"Password" : "${password}"\n},\n"Accounting Details" : {}\n}`;
+    var content = `{\n"profile" :\n{\n"Fname" : "${firstname}",\n"Lname" : "${lastname}",\n"Date" :\n{\n"date" : "${currentDate}",\n"time" : "${currentTime}"\n},\n"Gender" : "${gender}",\n"DP":\n{\n"imgSrc" : "Profile/${gender}.jpeg",\n"DateofPic" :\n{\n"date" : "",\n"time" : ""\n}\n},\n"Password" : "${password}"\n},\n"Accounting Details" : {}\n}`;
      var content = btoa(content);
     //  console.log("Current Date: " + currentDate);
     //   console.log("Current Time: " + currentTime);
