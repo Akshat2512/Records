@@ -70,7 +70,8 @@ function CheckDetails()
 var content;
 var sha1;
 var user = document.getElementById('un').value;
-var user = user.toLowerCase();
+ user = user.replace(/ +$/, "");
+ user = user.toLowerCase();
 
 
 fetch('https://api.github.com/repos/'+owner+'/'+repo+'/contents/file.json', {

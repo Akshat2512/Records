@@ -25,7 +25,7 @@
            }
         }
           function userValidation()
-        {
+        {   
             var name = document.getElementById('nm').value;
             var regex = /[a-zA-Z0-9`~!/.@#$%^&*()-_+=]{4,}/;
          
@@ -50,7 +50,7 @@
   
             var password=document.getElementById('pwd').value;
             
-             var regex1 = /[a-zA-Z0-9`~!/.@#$%^&*()-_+=]{4,}/;
+            var regex1 = /[a-zA-Z0-9`~!/.@#$%^&*()-_+=]{4,}/;
             if(!regex1.test(password))
             {    
                 document.getElementById('sp2').style.backgroundColor='red';
@@ -76,9 +76,11 @@
            {  return false; }
            
 
-           var user = document.getElementById("nm").value;
+            var user = document.getElementById("nm").value;
+            document.getElementById('nm').value = user.replace(/ +$/, "");
+            user = document.getElementById("nm").value;
             user = user.toLowerCase();
-           var pass = document.getElementById("pwd").value;
+            var pass = document.getElementById("pwd").value;
             
     
           
